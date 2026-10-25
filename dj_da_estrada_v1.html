@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080a10">
+<title>DJ da Estrada | Música que move</title>
+<style>
+:root{--bg:#080a10;--panel:#111722;--panel2:#182131;--ink:#f5f7fb;--muted:#a8b2c3;--lime:#c7ff4a;--cyan:#53e0d2;--line:#ffffff18}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0,#1b3341 0,transparent 38%),var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1080px,calc(100% - 30px));margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);gap:12px}.brand{font-weight:950;letter-spacing:1px}.brand b{color:var(--lime)}.tag{font-size:.75rem;color:var(--muted);letter-spacing:2px}.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px;padding:45px 0 35px}.kicker{font-size:.78rem;letter-spacing:3px;color:var(--lime);font-weight:800}.hero h1{font-size:clamp(2.8rem,8vw,5.7rem);letter-spacing:-.065em;line-height:.91;margin:16px 0}.hero h1 span{color:var(--lime)}.hero p{color:var(--muted);line-height:1.65;max-width:510px}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:850;background:var(--lime);color:#11160a}.btn.alt{background:var(--panel2);border:1px solid var(--line);color:var(--ink)}.art{min-height:280px;aspect-ratio:1.12;border-radius:25px;background:linear-gradient(135deg,#273b29,#131c2b 54%,#215a60);position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid #ffffff20}.sun{width:48%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0a1018 0 4px,#273b45 5px 7px);box-shadow:0 0 50px #c7ff4a44;display:grid;place-items:center;z-index:1}.sun:after{content:"DJ";display:grid;place-items:center;width:31%;aspect-ratio:1;border-radius:50%;background:var(--lime);color:#0a1010;font-weight:1000}.road{position:absolute;width:180%;height:38%;bottom:-10%;left:-40%;transform:rotate(-22deg);background:linear-gradient(90deg,transparent,#c7ff4a44,transparent);border-top:2px solid #c7ff4a55}.section{background:#111722df;border:1px solid var(--line);border-radius:20px;padding:21px;margin:16px 0}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.section h2{margin:0;font-size:1.3rem}.muted{color:var(--muted);font-size:.92rem;line-height:1.55}.tracks{margin-top:12px}.track{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.track:last-child{border-bottom:0}.track-symbol{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:#263342;color:var(--lime);font-size:1.25rem;flex-shrink:0}.track-info{flex:1;min-width:0}.track-info strong{display:block;overflow-wrap:anywhere}.track-info small{display:block;color:var(--muted);margin-top:3px}.track button{padding:9px 12px;border-radius:10px;background:#263342;border:1px solid var(--line);color:var(--ink);font-weight:750}.player{width:100%;margin-top:14px}.notice{font-size:.83rem;color:#c1cada;background:#172333;border-radius:12px;padding:12px;line-height:1.5}.admin{display:none}.admin.show{display:block}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:.88rem;color:#d7dfec}.field input,.field textarea,.field select{width:100%;background:#080e17;color:var(--ink);border:1px solid #ffffff26;border-radius:10px;padding:11px}.field input[type=file]{padding:9px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.small-btn{border:1px solid var(--line);background:#202b3b;color:var(--ink);border-radius:9px;padding:8px 10px}.admin-track{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0}.admin-track span{overflow-wrap:anywhere}.hidden{display:none!important}footer{text-align:center;padding:28px 0 40px;color:#8290a3;font-size:.8rem}
+@media(max-width:680px){.hero{grid-template-columns:1fr;padding-top:32px}.art{min-height:240px;max-width:430px;width:100%;margin:auto}.hero-copy{text-align:center}.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}.row{grid-template-columns:1fr}.tag{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="brand">DJ DA <b>ESTRADA</b></div><div class="tag">MÚSICA QUE MOVE • SETS & VIBES</div><button class="btn alt" id="adminToggle">Área do DJ</button></header>
+<main>
+<section class="hero">
+<div class="hero-copy"><div class="kicker">NA ESTRADA COM O SOM</div><h1>O próximo<br>som é <span>nosso.</span></h1><p>Do funk ao eletrônico, do flashback aos hits da festa. Aperte o play e leve a energia do DJ da Estrada com você.</p><div class="buttons"><button class="btn" onclick="document.getElementById('musicSection').scrollIntoView({behavior:'smooth'})">▶ Ouvir agora</button><button class="btn alt" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Conheça o DJ</button></div></div>
+<div class="art" role="img" aria-label="Arte abstrata de disco e estrada"><div class="sun"></div><div class="road"></div></div>
+</section>
+<section class="section" id="musicSection"><div class="section-head"><h2>Seleção musical</h2><span class="kicker">PLAYLISTS & SETS</span></div><p class="muted">Escolha uma faixa para tocar. Use a área do DJ para adicionar arquivos de áudio neste protótipo.</p><div id="publicTracks" class="tracks"><div class="track"><div class="track-symbol">♫</div><div class="track-info"><strong>Seu próximo set começa aqui</strong><small>Adicione músicas pela área do DJ</small></div></div></div><audio id="audio" class="player" controls preload="metadata"></audio></section>
+<section class="section" id="about"><h2>Sobre o DJ da Estrada</h2><p class="muted">Som para todos os momentos: festas, viagens e encontros. Em breve, você poderá colocar aqui sua biografia, agenda e links das redes sociais.</p><div class="buttons"><button class="btn alt" id="socialBtn">Configurar redes sociais</button></div><p id="socialMsg" class="muted hidden">Na próxima etapa, vamos adicionar seus links de Instagram, YouTube e WhatsApp.</p></section>
+<section class="section admin" id="adminPanel"><div class="section-head"><h2>Painel do DJ</h2><span class="kicker">ADMINISTRAÇÃO</span></div>
+<div id="loginBox"><p class="muted">Entre para gerenciar as músicas neste protótipo.</p><div class="field"><label for="password">Senha de demonstração</label><input id="password" type="password" autocomplete="current-password" placeholder="Digite a senha de demonstração"></div><button class="btn" id="loginBtn">Entrar no painel</button><p id="loginError" class="muted"></p><p class="notice">Demonstração local: a senha é <strong>estrada123</strong>. Não use essa senha em um site publicado. A autenticação real será configurada no próximo passo.</p></div>
+<div id="manageBox" class="hidden"><p class="notice">As músicas selecionadas ficam disponíveis neste navegador enquanto você testa. Ainda não são enviadas para um servidor nem ficam visíveis em outros dispositivos.</p>
+<div class="field"><label for="musicFiles">Adicionar arquivos de áudio</label><input id="musicFiles" type="file" accept="audio/*" multiple></div>
+<div class="row"><div class="field"><label for="trackTitle">Título da faixa (opcional)</label><input id="trackTitle" placeholder="Ex.: Set de sábado"></div><div class="field"><label for="trackStyle">Estilo musical</label><select id="trackStyle"><option>Variado</option><option>Funk</option><option>Eletrônica</option><option>House / Techno</option><option>Flashback</option><option>Sertanejo</option><option>Pop</option><option>Outro</option></select></div></div>
+<button class="btn" id="addTracks">Adicionar seleção</button> <button class="btn alt" id="logoutBtn">Sair do painel</button>
+<div id="adminTracks" class="tracks"></div>
+</div></section>
+</main>
+<footer>© <span id="year"></span> DJ da Estrada • Feito com música e estrada.</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let tracks=[], currentUrls=[];
+$('year').textContent=new Date().getFullYear();
+$('adminToggle').addEventListener('click',()=>{$('adminPanel').classList.toggle('show');$('adminPanel').scrollIntoView({behavior:'smooth',block:'start'})});
+$('socialBtn').addEventListener('click',()=> $('socialMsg').classList.toggle('hidden'));
+$('loginBtn').addEventListener('click',()=>{if($('password').value==='estrada123'){$('loginBox').classList.add('hidden');$('manageBox').classList.remove('hidden');$('loginError').textContent=''}else{$('loginError').textContent='Senha incorreta. Tente novamente.'}});
+$('logoutBtn').addEventListener('click',()=>{$('manageBox').classList.add('hidden');$('loginBox').classList.remove('hidden');$('password').value=''});
+function render(){
+ $('publicTracks').innerHTML='';$('adminTracks').innerHTML='';
+ if(!tracks.length){$('publicTracks').innerHTML='<div class="track"><div class="track-symbol">♫</div><div class="track-info"><strong>Seu próximo set começa aqui</strong><small>Adicione músicas pela área do DJ</small></div></div>';return}
+ tracks.forEach((t,i)=>{
+   const pub=document.createElement('div');pub.className='track';
+   const sym=document.createElement('div');sym.className='track-symbol';sym.textContent='♫';
+   const info=document.createElement('div');info.className='track-info';
+   const strong=document.createElement('strong');strong.textContent=t.title;
+   const small=document.createElement('small');small.textContent=t.style+' • '+(t.file.size/1048576).toFixed(1)+' MB';
+   const play=document.createElement('button');play.textContent='▶ Tocar';play.addEventListener('click',()=>{ $('audio').src=t.url;$('audio').play()});
+   info.append(strong,small);pub.append(sym,info,play);$('publicTracks').append(pub);
+   const adm=document.createElement('div');adm.className='admin-track';
+   const label=document.createElement('span');label.textContent=t.title+' · '+t.style;
+   const remove=document.createElement('button');remove.className='small-btn';remove.textContent='Remover';remove.addEventListener('click',()=>{URL.revokeObjectURL(t.url);tracks=tracks.filter(x=>x!==t);render()});
+   adm.append(label,remove);$('adminTracks').append(adm);
+ });
+}
+$('addTracks').addEventListener('click',()=>{
+ const files=Array.from($('musicFiles').files||[]).filter(f=>f.type.startsWith('audio/'));
+ if(!files.length){alert('Selecione um ou mais arquivos de áudio primeiro.');return}
+ files.forEach((file,i)=>{const url=URL.createObjectURL(file);currentUrls.push(url);const typed=$('trackTitle').value.trim();tracks.push({file,url,title:typed&&files.length===1?typed:file.name.replace(/\.[^.]+$/,''),style:$('trackStyle').value})});
+ $('musicFiles').value='';$('trackTitle').value='';render();
+});
+window.addEventListener('beforeunload',()=>currentUrls.forEach(URL.revokeObjectURL));
+</script>
+</body>
+</html>
